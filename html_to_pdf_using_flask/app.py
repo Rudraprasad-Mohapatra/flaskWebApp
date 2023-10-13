@@ -11,7 +11,7 @@ def index():
 
 @app.route("/convert_html_to_pdf", methods=["POST"])
 def convert_html_to_pdf():
-    html_file = request.files["0"]
+    html_file = request.files["html_file"]
     pdf_file = html_file.filename + ".pdf"
 
     config = pdfkit.configuration(
